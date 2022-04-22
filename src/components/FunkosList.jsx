@@ -6,8 +6,10 @@ export default function FunkoList () {
   const { collection } = useContext(CollectionContext)
 
   return (
-    <ul className='flex flex-wrap items-center -mx-4 mb-16'>
-      {collection !== null && collection.map(funko => <Funko key={funko.id} funko={funko} />)}
+    <ul class='flex flex-wrap -mx-6'>
+      {collection !== null
+        ? collection.map(funko => <Funko key={funko.id} funko={funko} />)
+        : <div className='px-6'><p>No tienes ningún producto en tu colección</p></div>}
     </ul>
   )
 }

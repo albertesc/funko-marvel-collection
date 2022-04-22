@@ -12,8 +12,10 @@ export default function Wishlist () {
   return (
     <>
       <h1 className='text-xl my-8 font-semibold'>Mi colección</h1>
-      <ul className='flex flex-wrap items-center -mx-4 mb-16'>
-        {collection !== null && collection.map(funko => <Funko key={funko.id} funko={funko} />)}
+      <ul class='flex flex-wrap -mx-6'>
+        {collection > 0
+          ? collection.map(funko => <Funko key={funko.id} funko={funko} />)
+          : <div className='px-6'><p>No tienes ningún producto en tu colección</p></div>}
       </ul>
     </>
   )

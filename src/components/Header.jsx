@@ -12,7 +12,9 @@ export default function Header () {
   return (
     <header className='h-16 mb-6'>
       <div className='container md:max-w-3xl h-full flex items-center justify-between'>
-        <h1 className='text-xl'><span className='font-bold'>FunkoPop!</span>Marvel</h1>
+        <Link to='/'>
+          <h1 className='text-xl'><span className='font-bold'>FunkoPop!</span>Marvel</h1>
+        </Link>
         <nav className='flex space-x-8'>
           <Link to='/'>Colecciones</Link>
           <span className='relative'>
