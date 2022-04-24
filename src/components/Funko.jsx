@@ -24,15 +24,15 @@ export default function Funko ({ funko }) {
   }
 
   return (
-    <div class='w-full sm:w-1/2 lg:w-1/3 px-6 mb-16'>
-      <div class='flex flex-col h-full'>
-        <div class='relative w-full overflow-hidden mb-4'>
+    <div className='w-full sm:w-1/2 lg:w-1/3 px-6 mb-16'>
+      <div className='flex flex-col h-full'>
+        <div className='relative w-full overflow-hidden mb-4'>
           <img src={funko.image} alt={funko.name} className='object-cover w-full h-full' />
           {funko.isBought && <span className='absolute top-0 left-0 text-xs bg-gray-900 text-white px-2 py-1 rounded-full mb-2'>Ya es mio!</span>}
         </div>
-        <div class='flex flex-col flex-grow inset-0'>
+        <div className='flex flex-col flex-grow inset-0'>
           <span className='mb-3'>{funko.name}</span>
-          <div class='mt-auto'>
+          <div className='mt-auto'>
             {(funko.link && !funko.isBought) &&
               <a href={funko.link} target='_blank' className='text-xs bg-red-600 text-white px-2 py-1 rounded-full mt-2' rel='noreferrer'>
                 Comprar en Amazon
